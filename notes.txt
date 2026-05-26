@@ -1,0 +1,7 @@
+if you want to run via terminal
+
+javac Filename.java
+it will create the class file 
+
+ java Filename
+it will run the code
