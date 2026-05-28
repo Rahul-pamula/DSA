@@ -11,6 +11,6 @@ public class Inverted_half_pyrimid{
                 System.out.print("*");
             }
             System.out.println();
-        }
+        }sc.close();
     }
 }

@@ -14,6 +14,6 @@ public class Zero_one_triangle{
                 }
                 }
                 System.out.println();
-            }
+            }sc.close();
         }
     }

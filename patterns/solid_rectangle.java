@@ -11,6 +11,6 @@ public class solid_rectangle {
                 System.out.print("*");
             }
             System.out.println();
-        }
+        }sc.close();
     }
 }

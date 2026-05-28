@@ -17,5 +17,6 @@ public class Hallow_rectangle{
         }
             System.out.println();
         }
+        sc.close();
     }
 }

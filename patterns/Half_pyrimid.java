@@ -10,5 +10,6 @@ public class Half_pyrimid{
             }
             System.out.println();
         }
+        sc.close();
     }
 }

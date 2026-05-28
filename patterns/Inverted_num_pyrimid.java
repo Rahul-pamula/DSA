@@ -12,6 +12,6 @@ public class Inverted_num_pyrimid{
         }
         System.out.println();
         
-    }
+    }sc.close();
 }
 }

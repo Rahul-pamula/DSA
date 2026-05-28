@@ -12,5 +12,6 @@ public class Floyids_triangle{
            
             System.out.println();
         }
+        sc.close();
     }
 }

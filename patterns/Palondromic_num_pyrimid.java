@@ -1,4 +1,4 @@
-import java.util.*;
+// import java.util.*;
 public class Palondromic_num_pyrimid{
     public static void main(String[] args){
         int n=6;

@@ -53,7 +53,7 @@ public class Outer_pyrimid{
             }
 
             System.out.println();
-        }
+        }sc.close();
     }
 }
     

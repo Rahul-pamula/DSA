@@ -21,5 +21,6 @@ public class Dimond{
             }
             System.out.println();
         }
+        sc.close();
     }
 }

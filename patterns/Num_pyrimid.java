@@ -19,5 +19,6 @@ public class Num_pyrimid{
             }
             System.out.println();
         }
+        sc.close();
     }
 }

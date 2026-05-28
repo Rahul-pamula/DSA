@@ -12,6 +12,7 @@ public class Inverted_half_pyrimid_with_num {
             }
             System.out.println();
         }
+        sc.close();
     }
 }
     

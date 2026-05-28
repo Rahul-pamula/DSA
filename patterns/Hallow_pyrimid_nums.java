@@ -20,5 +20,6 @@ public class Hallow_pyrimid_nums{
             }
             System.out.println();
         }
+        sc.close();
     }
 }

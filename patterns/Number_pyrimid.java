@@ -13,6 +13,6 @@ public class Number_pyrimid{
                 num++;
             }
             System.out.println();
-        }
+        }sc.close();
     }
 }
