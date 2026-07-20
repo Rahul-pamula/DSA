@@ -6,7 +6,8 @@ public class Half_pyrimid_with_num{
         int n = sc.nextInt();
         for(int i=1;i<=n;i++){
             for(int j =1;j<=i;j++){
-                System.out.print(j+" ");
+                // System.out.print(i+" "); for row numbers
+                 System.out.print(j+" "); //for col numbers
             }
             System.out.println();
         }

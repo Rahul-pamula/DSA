@@ -3,5 +3,5 @@ if you want to run via terminal
 javac Filename.java
 it will create the class file 
 
- java Filename
+ java Filename.java
 it will run the code
