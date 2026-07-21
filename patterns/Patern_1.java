@@ -56,7 +56,7 @@ public class Patern_1 {
         Scanner sc = new Scanner(System.in);
         n=sc.nextInt();
         
-        pyr3(n);
+        pyr2(n);
         
     }
 }
