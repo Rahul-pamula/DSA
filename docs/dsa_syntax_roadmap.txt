@@ -1,0 +1,149 @@
+# Java DSA Syntax Cheat Sheet & Roadmap
+
+This guide is designed to be your constant companion while tackling LeetCode and Striver's A2Z DSA Sheet. It provides the exact, copy-pasteable Java syntax you need to stop fighting the language and start focusing on the algorithms.
+
+---
+
+## Part 1: The Ultimate Java Syntax Cheat Sheet
+
+### 1. Arrays (Static Size)
+// Initialization
+int[] arr = new int[5];
+int[] arr2 = {1, 2, 3, 4, 5};
+
+// Length (Notice: no parentheses!)
+int n = arr.length;
+
+// Sorting
+Arrays.sort(arr); // Ascending
+Arrays.sort(arr, Collections.reverseOrder()); // Descending (Requires Integer[], not int[])
+
+// Matrix (2D Array)
+int[][] matrix = new int[3][4]; // 3 rows, 4 columns
+int rows = matrix.length;
+int cols = matrix[0].length;
+
+### 2. Strings
+String s = "hello";
+
+// Length (Notice: has parentheses!)
+int len = s.length();
+
+// Accessing characters
+char c = s.charAt(0);
+
+// Substrings (start is inclusive, end is exclusive)
+String sub = s.substring(0, 3); // "hel"
+
+// Conversions
+char[] arr = s.toCharArray();
+String s2 = new String(arr);
+String s3 = String.valueOf(123); // "123"
+
+// Equality (NEVER use == for strings)
+if (s.equals("hello")) { ... }
+
+// StringBuilder (Use this when modifying strings in a loop!)
+StringBuilder sb = new StringBuilder();
+sb.append("a");
+sb.reverse();
+String finalStr = sb.toString();
+
+### 3. ArrayList (Dynamic Arrays)
+List<Integer> list = new ArrayList<>();
+
+list.add(1);          // Add to end
+list.add(0, 5);       // Insert 5 at index 0
+list.get(0);          // Get element at index 0
+list.set(0, 10);      // Update element at index 0 to 10
+list.remove(list.size() - 1); // Remove last element
+int size = list.size(); // Length
+
+// Sorting
+Collections.sort(list); // Ascending
+list.sort((a, b) -> b - a); // Descending using Lambda
+
+### 4. HashMap (Dictionaries)
+Map<String, Integer> map = new HashMap<>();
+
+map.put("alice", 1);
+map.get("alice"); // Returns 1
+map.getOrDefault("bob", 0); // Returns 0 if "bob" isn't in map
+map.containsKey("alice"); // true
+map.remove("alice");
+
+// Iterating over a HashMap (CRITICAL for frequency maps)
+for (Map.Entry<String, Integer> entry : map.entrySet()) {
+    String key = entry.getKey();
+    int val = entry.getValue();
+}
+
+### 5. HashSet (Unique Elements)
+Set<Integer> set = new HashSet<>();
+
+set.add(1);
+set.contains(1); // true
+set.remove(1);
+
+// Iterating
+for (int num : set) { ... }
+
+### 6. Queue (BFS) & Stack (DFS)
+// Queue (FIFO - First In First Out)
+Queue<Integer> q = new LinkedList<>();
+q.offer(1); // Add to end
+int first = q.poll(); // Remove and return front element
+int top = q.peek(); // View front element without removing
+
+// Stack (LIFO - Last In First Out) -> Use ArrayDeque in modern Java
+Deque<Integer> stack = new ArrayDeque<>();
+stack.push(1); // Add to top
+int popped = stack.pop(); // Remove and return top element
+
+### 7. PriorityQueue (Min/Max Heaps)
+// Min Heap (Smallest element at the top)
+PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+
+// Max Heap (Largest element at the top)
+PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a, b) -> b - a);
+
+minHeap.offer(5); // Add
+int smallest = minHeap.poll(); // Remove and return root
+
+### 8. Math Utilities
+Math.max(a, b);
+Math.min(a, b);
+Math.abs(a);
+Math.pow(a, b);
+
+---
+
+## Part 2: The Striver A2Z Aligned Roadmap
+
+### Phase 1: Learn the Language & Basics (Step 1-2 in Striver)
+- **Goal:** Get your Java syntax muscle memory perfect.
+- **Topics:** Basic Math, Patterns, Recursion Basics, Hashing Basics.
+
+### Phase 2: Array Manipulation & Pointers (Step 3 in Striver)
+- **Goal:** Master index manipulation.
+- **Topics:** Two Pointers, Sliding Window, Prefix Sum, Subarrays.
+
+### Phase 3: Binary Search (Step 4 in Striver)
+- **Goal:** Learn to search on answers.
+- **Topics:** 1D Arrays, 2D Matrices, Search Space answers.
+
+### Phase 4: Strings & LinkedLists (Step 5-6 in Striver)
+- **Goal:** Master object manipulation in Java.
+- **Topics:** String parsing, Reversing Links, Fast/Slow pointers.
+
+### Phase 5: Recursion, Backtracking, and Trees (Step 7, 9-10 in Striver)
+- **Goal:** Master hierarchical data.
+- **Topics:** Subsets, Permutations, Binary Trees, BSTs.
+
+### Phase 6: Graphs (Step 15 in Striver)
+- **Goal:** Network traversal and shortest paths.
+- **Topics:** BFS, DFS, Shortest Path, Topological Sort.
+
+### Phase 7: Dynamic Programming (Step 16 in Striver)
+- **Goal:** Optimization.
+- **Topics:** 1D DP, Grids, Strings, Knapsack.

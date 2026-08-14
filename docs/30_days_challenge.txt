@@ -1,0 +1,61 @@
+# 🚀 30-Day DSA Consistency Challenge
+
+*Discipline is just choosing between what you want now and what you want most.* 
+
+Goal: Write code and solve at least ONE DSA problem every single day for 30 days.
+
+## The Rules of the Challenge
+1. No Zero Days: Open your IDE and write one line of code, or review one problem. A 5-minute day is better than a 0-minute day.
+2. Track It: Check off the box here every time you complete a day (change [ ] to [x]).
+3. Use the Cheat Sheet: Rely on the dsa_syntax_roadmap.txt to avoid getting stuck on syntax.
+
+---
+
+## 🏆 Your Progress Tracker
+
+### Week 1: Building the Habit (Focus on Arrays, Hashing, Two Pointers)
+- [ ] Day 1 (TODAY): Let's go! (Suggestion: Two Sum or Valid Anagram)
+- [ ] Day 2: 
+- [ ] Day 3: 
+- [ ] Day 4: 
+- [ ] Day 5: 
+- [ ] Day 6: 
+- [ ] Day 7: 
+
+### Week 2: Gaining Momentum (Focus on Binary Search, Slinding Window)
+- [ ] Day 8: 
+- [ ] Day 9: 
+- [ ] Day 10: 
+- [ ] Day 11: 
+- [ ] Day 12: 
+- [ ] Day 13: 
+- [ ] Day 14: 
+
+### Week 3: Hitting the Stride (Focus on LinkedLists, Stacks/Queues)
+- [ ] Day 15: Halfway there!
+- [ ] Day 16: 
+- [ ] Day 17: 
+- [ ] Day 18: 
+- [ ] Day 19: 
+- [ ] Day 20: 
+- [ ] Day 21: 
+
+### Week 4 & Beyond: True Discipline (Focus on Trees, Recursion)
+- [ ] Day 22: 
+- [ ] Day 23: 
+- [ ] Day 24: 
+- [ ] Day 25: 
+- [ ] Day 26: 
+- [ ] Day 27: 
+- [ ] Day 28: 
+- [ ] Day 29: 
+- [ ] Day 30: 🏁 FINISH LINE 🏁
+
+---
+
+## 💡 Daily Checklist for Solving a Problem
+1. Did I understand the problem statement?
+2. Did I think of a brute force solution first?
+3. Did I try to optimize it?
+4. Did I write the code and handle edge cases?
+5. (Crucial) If I got stuck for more than 45 minutes, did I look at the solution, understand it, and code it myself?

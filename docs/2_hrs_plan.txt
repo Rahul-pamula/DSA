@@ -1,0 +1,35 @@
+# 2-Hour DSA Battle Plan (Day 1)
+
+## Hour 1: The Warm-Up (Applying what you know)
+Build confidence and get the fingers typing Java by solving two classic array/string problems. 
+
+1. Problem 1: Valid Anagram (Easy)
+   - Goal: Solve this using what you already know (Strings and Arrays). 
+   - Hint: Convert string to char array, sort, and compare. Or use an int array of size 26 to count letters.
+   - Time limit: 20 minutes.
+
+2. Problem 2: Contains Duplicate (Easy)
+   - Goal: Think about nested loops (brute force) vs sorting the array first.
+   - Time limit: 20 minutes.
+
+## Hour 2: The Level-Up (Introducing Hash Sets/Maps)
+Nested loops (O(n^2)) and sorting (O(n log n)) are great, but instant lookups (O(1)) are better.
+
+1. Learn the Syntax (10 minutes):
+   - Look at the dsa_syntax_roadmap.txt for HashSet and HashMap. 
+   - HashSet: Only stores unique things. 
+   - HashMap: Stores key-value pairs (e.g., a character and its frequency).
+
+2. Problem 3: Re-do "Contains Duplicate" using a HashSet (15 minutes)
+   - Goal: Loop through the array once. Try to .add() each number to a HashSet. If the set already .contains() the number, it's a duplicate.
+
+3. Problem 4 (The Boss Fight): Two Sum (Easy)
+   - Goal: First write the brute force solution (nested loops). 
+   - Challenge: Do it in one pass using a HashMap. Calculate complement = target - currentNumber. Check if complement is in the map.
+   - Time limit: 35 minutes.
+
+## Execution Checklist:
+1. Make your LinkedIn post.
+2. Put phone away (Do Not Disturb).
+3. Open LeetCode and search for Valid Anagram.
+4. Go!

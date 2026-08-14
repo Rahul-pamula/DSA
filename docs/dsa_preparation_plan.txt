@@ -1,0 +1,96 @@
+# Open Source DSA Preparation Plan
+
+This preparation plan bridges the gap between theoretical Data Structures & Algorithms (DSA) and the practical architecture of open-source CLI tools, compilers, and system utilities like `agent-toolkit`. 
+
+By focusing on these specific problem types, you will build the exact mental models needed to understand and contribute to real-world codebases.
+
+---
+
+## Phase 1: Trees and File Systems (Weeks 1-2)
+*Why: Almost every open-source CLI tool interacts heavily with the local file system. A file system is fundamentally an N-ary tree.*
+
+**Concepts to Learn:**
+- N-ary Trees vs Binary Trees
+- Depth-First Search (DFS) for deep file discovery
+- Breadth-First Search (BFS) for level-by-level processing
+- Recursion fundamentals
+
+**Practical Open Source Applications:**
+- Walking directories to find configuration files (`.yaml`, `.md`).
+- Building nested directory structures.
+- Abstract Syntax Trees (ASTs) for parsing code.
+
+**Problems to Solve:**
+1. Maximum Depth of N-ary Tree (Simulates finding the deepest folder)
+2. N-ary Tree Preorder Traversal (Simulates reading files top-down)
+3. Binary Tree Right Side View
+4. Design File System (Direct real-world mapping)
+
+---
+
+## Phase 2: Graphs and Dependencies (Weeks 3-4)
+*Why: Package managers (like npm/pip), build tools (like Make), and compilers (like the agent-toolkit compiler) all rely on resolving dependencies using Directed Acyclic Graphs (DAGs).*
+
+**Concepts to Learn:**
+- Adjacency Lists and Adjacency Matrices
+- Cycle Detection in Directed Graphs
+- Topological Sorting (Kahn's Algorithm)
+
+**Practical Open Source Applications:**
+- **Dependency Resolution:** If `Skill A` requires `Skill B`, ensure `B` is compiled before `A`.
+- **Cycle Detection:** Throw an error if `Skill A` requires `B`, and `B` requires `A`.
+- **Routing:** Network paths or finding the shortest path between modules.
+
+**Problems to Solve:**
+1. Course Schedule (The classic cycle detection problem!)
+2. Course Schedule II (The classic topological sort problem!)
+3. Find Eventual Safe States
+4. Clone Graph (Deep copying object graphs in memory)
+
+---
+
+## Phase 3: String Parsing and Validation (Weeks 5-6)
+*Why: CLI tools and compilers constantly ingest text files (YAML, JSON, Markdown). Validating syntax and parsing templates is a daily occurrence.*
+
+**Concepts to Learn:**
+- Stack-based parsing
+- String manipulation techniques
+- Two-pointer techniques for string traversal
+
+**Practical Open Source Applications:**
+- Parsing Markdown templates and replacing `{{variables}}`.
+- Validating that configuration files have matching brackets/scopes.
+- Lexical analysis for custom domain-specific languages (DSLs).
+
+**Problems to Solve:**
+1. Valid Parentheses (Fundamental for syntax validation)
+2. Decode String (Simulates expanding templates/macros)
+3. Simplify Path (Crucial for normalizing file paths like `/a/./b/../../c/`)
+4. Find All Anagrams in a String (Sliding window practice)
+
+---
+
+## Phase 4: Hash Maps and Tries (Weeks 7-8)
+*Why: High-performance systems rely heavily on fast lookups and caching. Tries are specifically used for command-line auto-completion and routing.*
+
+**Concepts to Learn:**
+- Hash collisions and Map internals
+- Trie (Prefix Tree) implementation
+- Caching strategies (LRU)
+
+**Practical Open Source Applications:**
+- **Hash Maps:** Mapping capability IDs (`core/assistant`) to loaded memory objects. Caching file reads so you don't read the same file twice.
+- **Tries:** Auto-completing CLI commands (e.g., typing `agent-toolkit b<TAB>` and getting `build`). Fast path resolution.
+
+**Problems to Solve:**
+1. LRU Cache (Simulates building a memory cache for file reads)
+2. Implement Trie (Prefix Tree) (Direct mapping to CLI autocomplete)
+3. Group Anagrams (Advanced hash map grouping)
+4. Design Add and Search Words Data Structure
+
+---
+
+## How to execute this plan
+1. **Focus on Patterns, not memorization:** Understand *why* Topological Sort solves dependency problems.
+2. **Relate back to the code:** When you solve "Simplify Path," go look at how Python's `os.path.abspath()` or V's `os.abs_path()` is implemented in their standard libraries!
+3. **Don't over-index on Hard math:** Open source systems programming rarely requires Dynamic Programming or complex math. Focus deeply on the Medium difficulty Tree/Graph/String problems.
