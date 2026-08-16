@@ -1,0 +1,478 @@
+====================================================
+   DAY 2 REVISION TEST - Syntax + Pattern Recognition
+====================================================
+Cover: Arrays, Strings, Two Pointers, Sorting, Prefix Sum
+Problems: Anagram, Contains Duplicate, Concatenation,
+          Running Sum, Move Zeroes, Remove Duplicates
+
+RULES: No peeking at code! Write answers on paper first.
+       Check answers at the BOTTOM after all 50.
+====================================================
+
+
+======================================
+SECTION 1 - Fill in the Blank (Syntax)
+20 Questions
+======================================
+
+Q1. Convert String s to a char array:
+    char[] arr = s.________();
+
+    Your Answer: _______________
+
+
+Q2. Sort a char array arr:
+    Arrays.________(arr);
+
+    Your Answer: _______________
+
+
+Q3. Check if two char arrays a and b have the same content:
+    Arrays.________(a, b);
+
+    Your Answer: _______________
+
+
+Q4. Get the length of a String s:
+    int len = s.________();
+
+    Your Answer: _______________
+
+
+Q5. Get the length of an array arr:
+    int len = arr.________;
+
+    Your Answer: _______________
+
+
+Q6. Get the character at index 2 of String s:
+    char c = s.________(2);
+
+    Your Answer: _______________
+
+
+Q7. Compare content of two Strings a and b:
+    a.________(b);
+
+    Your Answer: _______________
+
+
+Q8. What is wrong here?
+    if (s1 == s2) { ... }    // comparing two Strings
+
+    Your Answer: _______________
+
+
+Q9. What is wrong here?
+    int len = arr.length();  // arr is an int[]
+
+    Your Answer: _______________
+
+
+Q10. Fill in the blank:
+     Arrays use _______ (with/without) parentheses for length.
+     Strings use _______ (with/without) parentheses for length.
+
+     Your Answer: _______________
+
+
+Q11. What does Arrays.sort() do to the original array?
+
+     Your Answer: _______________
+
+
+Q12. Fill the loop condition to safely access nums[i] and nums[i+1]:
+     for (int i = 0; i < ________; i++) {
+         if (nums[i] == nums[i+1]) ...
+     }
+
+     Your Answer: _______________
+
+
+Q13. What is the difference between return j++ and return j?
+
+     Your Answer: _______________
+
+
+Q14. Declare a char array of size 5 in Java:
+     char[] arr = new ________[________];
+
+     Your Answer: _______________
+
+
+Q15. What import is needed to use Arrays.sort()?
+
+     Your Answer: _______________
+
+
+Q16. What is the output?
+     int[] arr = {3, 1, 2};
+     Arrays.sort(arr);
+     System.out.println(arr[0]);
+
+     Your Answer: _______________
+
+
+Q17. What is the output?
+     String s = "hello";
+     System.out.println(s.length());
+
+     Your Answer: _______________
+
+
+Q18. What is nums.length if nums = {1, 2, 3, 4, 5}?
+
+     Your Answer: _______________
+
+
+Q19. Fill in the blank for Running Sum pattern:
+     runningSum[i] = runningSum[________] + nums[i];
+
+     Your Answer: _______________
+
+
+Q20. What happens if you hardcode return true at the end of a
+     method that should return based on a condition?
+
+     Your Answer: _______________
+
+
+======================================
+SECTION 2 - Spot the Bug (Code Review)
+15 Questions
+======================================
+
+Q21. Find the bug:
+     char a[] = s.toCharArray();
+     char b[] = t.toCharArray();
+     if (a == b) return true;
+     return false;
+
+     Bug: _______________
+
+
+Q22. Find the bug:
+     for (int i = 0; i <= nums.length; i++) {
+         if (nums[i] == nums[i+1]) return true;
+     }
+
+     Bug: _______________
+
+
+Q23. Find the bug:
+     public boolean isAnagram(String s, String t) {
+         char a[] = s.toCharArray();
+         char b[] = t.toCharArray();
+         if (Arrays.equals(a, b)) return true;
+         return false;
+     }
+     HINT: What are you forgetting before comparing?
+
+     Bug: _______________
+
+
+Q24. Find the bug:
+     int runningSum[] = new int[nums.length];
+     for (int i = 0; i < nums.length; i++) {
+         runningSum[i] = runningSum[i-1] + nums[i];
+     }
+
+     Bug: _______________
+
+
+Q25. Find the bug:
+     public boolean containsDuplicate(int[] nums) {
+         Arrays.sort(nums);
+         for (int i = 0; i < nums.length-1; i++) {
+             if (nums[i] == nums[i+1]) return true;
+         }
+     }
+
+     Bug: _______________
+
+
+Q26. Find the bug:
+     int ans[] = new int[nums.length];
+     for (int i = 0; i < nums.length; i++) {
+         ans[i] = nums[i];
+         ans[i + nums.length] = nums[i];
+     }
+
+     Bug: _______________
+
+
+Q27. Find the bug:
+     public void moveZeroes(int[] nums) {
+         int j = 0;
+         for (int i = 0; i < nums.length; i++) {
+             if (nums[i] != 0) {
+                 nums[j] = nums[i];
+                 j++;
+             }
+         }
+     }
+
+     Bug: _______________
+
+
+Q28. Find the bug:
+     return = true;
+
+     Bug: _______________
+
+
+Q29. Find the bug:
+     for (int i = 0; i < nums.length-1; i++) {
+         if (nums[i] != nums[i+1]) {
+             nums[j] = nums[i];
+             j++;
+         }
+     }
+     nums[j] = nums[nums.length - 1];
+     return j;
+
+     Bug: _______________
+
+
+Q30. Find the bug:
+     if (s.sort() == t.sort()) ...
+
+     Bug: _______________
+
+
+Q31. Find the bug:
+     if (s.length == t.length) ...   // s and t are Strings
+
+     Bug: _______________
+
+
+Q32. Find the bug:
+     runningSum[0] = nums[0];
+     for (int i = 0; i < nums.length; i++) {
+         runningSum[i] = runningSum[i-1] + nums[i];
+     }
+
+     Bug: _______________
+
+
+Q33. Find the bug:
+     for (int i = 0; i <= nums.length-2; i++) {
+         if (nums[i] == nums[i+1]) {
+             result = true;
+         } else {
+             result = false;
+         }
+     }
+     return result;
+
+     Bug: _______________
+
+
+Q34. Find the bug (Remove Duplicates):
+     int j = 0;
+     for (int i = 0; i < nums.length-1; i++) {
+         if (nums[i] != nums[i+1]) {
+             nums[j] = nums[i];
+             j++;
+         }
+     }
+     return j;
+
+     Bug: _______________
+
+
+Q35. Find the bug:
+     Arrays.Issorted(a, b);
+
+     Bug: _______________
+
+
+======================================
+SECTION 3 - Pattern Recognition
+10 Questions
+======================================
+
+Q36. What pattern does "Valid Anagram" use?
+     a) Two Pointers
+     b) Sorting + Compare
+     c) Sliding Window
+     d) Binary Search
+
+     Answer: ___
+
+
+Q37. What pattern does "Contains Duplicate" (sort approach) use?
+     a) HashSet
+     b) Sorting + Adjacent Check
+     c) Two Pointers
+     d) Prefix Sum
+
+     Answer: ___
+
+
+Q38. What pattern does "Move Zeroes" use?
+     a) Sorting
+     b) Two Pointers
+     c) Sliding Window
+     d) Binary Search
+
+     Answer: ___
+
+
+Q39. What pattern does "Running Sum" use?
+     a) Two Pointers
+     b) Sorting
+     c) Prefix Sum
+     d) Hashing
+
+     Answer: ___
+
+
+Q40. What pattern does "Remove Duplicates from Sorted Array" use?
+     a) Binary Search
+     b) Hashing
+     c) Two Pointers
+     d) Sliding Window
+
+     Answer: ___
+
+
+Q41. In "Move Zeroes" - what does pointer i do? What does pointer j do?
+
+     Answer: _______________
+
+
+Q42. Why does sorting help in "Contains Duplicate"?
+
+     Answer: _______________
+
+
+Q43. Why does sorting help in "Valid Anagram"?
+
+     Answer: _______________
+
+
+Q44. In "Remove Duplicates" - when do you write to nums[j]?
+     a) When nums[i] == nums[i+1]
+     b) When nums[i] != nums[i+1]
+
+     Answer: ___
+
+
+Q45. In "Concatenation of Array" - fill in:
+     ans[i + nums.length] = ?
+
+     Answer: _______________
+
+
+======================================
+SECTION 4 - Time Complexity
+5 Questions
+======================================
+
+Q46. Time complexity of sorting an array of n elements?
+
+     Answer: _______________
+
+
+Q47. "Contains Duplicate" with brute force (nested loops)?
+
+     Answer: _______________
+
+
+Q48. "Contains Duplicate" with sorting approach?
+
+     Answer: _______________
+
+
+Q49. "Move Zeroes" with two pointers?
+
+     Answer: _______________
+
+
+Q50. "Running Sum"?
+
+     Answer: _______________
+
+
+====================================================
+====================================================
+====================================================
+                        ANSWERS
+====================================================
+====================================================
+====================================================
+
+
+SECTION 1 ANSWERS
+
+Q1.  toCharArray()
+Q2.  sort
+Q3.  equals
+Q4.  length()   <- WITH parentheses
+Q5.  length     <- WITHOUT parentheses
+Q6.  charAt
+Q7.  equals
+Q8.  == checks reference, not content. Use .equals()
+Q9.  Arrays use length without (). length() is for Strings only
+Q10. Arrays: WITHOUT parentheses | Strings: WITH parentheses
+Q11. It sorts the original array in-place (modifies it)
+Q12. nums.length - 1
+Q13. return j++ returns old value then increments. return j returns as-is
+Q14. char[] arr = new char[5]
+Q15. import java.util.Arrays
+Q16. 1  (smallest after sorting)
+Q17. 5
+Q18. 5
+Q19. i - 1
+Q20. Method always returns true regardless of condition - logic is wrong
+
+
+SECTION 2 ANSWERS
+
+Q21. == doesnt compare array content. Use Arrays.equals(a, b)
+Q22. i <= nums.length causes nums[i+1] to go out of bounds. Use i < nums.length - 1
+Q23. Arrays not sorted before comparing! Add Arrays.sort(a) and Arrays.sort(b) first
+Q24. When i=0, runningSum[i-1] = runningSum[-1] = out of bounds!
+     Fix: set runningSum[0]=nums[0] before loop and start from i=1
+Q25. Missing return false - method has no return if no duplicate found
+Q26. ans array size is nums.length but needs 2*nums.length. Will get ArrayIndexOutOfBoundsException
+Q27. Missing second loop to fill remaining positions with 0 after j
+Q28. return is not assignment. Remove the = sign. Use: return true
+Q29. Last element placed at nums[j] but j not incremented. Should be j++ then return j
+Q30. Strings dont have .sort() method. Convert to char array, then Arrays.sort()
+Q31. Strings use length() with parentheses, not length
+Q32. Loop starts at i=0 but runningSum[0] already set. Loop should start at i=1
+Q33. result=false in else overwrites previous true result.
+     Fix: return true immediately when found. return false after loop.
+Q34. Missing last element handling!
+     After loop: nums[j] = nums[nums.length-1]; j++;
+Q35. Method doesnt exist. Use Arrays.equals(a, b) to compare arrays
+
+
+SECTION 3 ANSWERS
+
+Q36. b) Sorting + Compare
+Q37. b) Sorting + Adjacent Check
+Q38. b) Two Pointers
+Q39. c) Prefix Sum
+Q40. c) Two Pointers
+Q41. i reads every element. j only moves when non-zero found (write position)
+Q42. After sorting, duplicates are always next to each other - easy to check adjacent
+Q43. After sorting, anagrams become identical - easy to compare directly
+Q44. b) When nums[i] != nums[i+1] (unique element found)
+Q45. ans[i + nums.length] = nums[i]
+
+
+SECTION 4 ANSWERS
+
+Q46. O(n log n)
+Q47. O(n squared)
+Q48. O(n log n)
+Q49. O(n)
+Q50. O(n)
+
+
+====================================================
+Score: ___/50   Date: ___________
+====================================================
